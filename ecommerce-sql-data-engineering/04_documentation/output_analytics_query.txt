@@ -1,1 +1,33 @@
 
+The analysis of top customers revealed a strong revenue concentration among a small group of high-value buyers. The highest-spending customer generated nearly 80% more revenue than the second-ranked customer, indicating potential revenue concentration risk. This suggests an opportunity for VIP customer retention strategies and targeted loyalty programs.
+
+
+Revenue analysis by seller state revealed a strong geographic concentration, with São Paulo accounting for the majority of total revenue. Additionally, minor inconsistencies were detected in state naming conventions (e.g., full state names vs. abbreviations), highlighting the importance of data standardization in production systems.
+
+
+Seller-level revenue analysis indicates a competitive and balanced marketplace, with the top five sellers generating similar revenue figures. Unlike geographic concentration observed at the state level, seller performance appears more evenly distributed, reducing dependency risk on individual vendors.
+
+
+Enhanced seller analysis reveals two distinct performance strategies: high-volume sellers with moderate order values and premium sellers with fewer but high-value transactions. Notably, São Paulo dominates seller performance, contributing 4 of the top 5 sellers, reinforcing geographic concentration trends observed earlier.
+
+
+Time-series revenue analysis reveals a strong growth trajectory throughout 2017, culminating in a significant revenue spike in November, likely driven by seasonal promotional events. In 2018, revenue stabilized around 1 million per month, indicating market maturity and operational scaling.
+
+
+Product demand analysis shows strong dominance of household and personal care categories, particularly “cama_mesa_banho” and “beleza_saude.” These categories likely represent high-frequency purchases, making them ideal candidates for retention strategies and cross-selling initiatives.
+
+
+Customer behavior analysis indicates a limited but valuable repeat customer segment, with the most loyal customer placing 14 orders. The majority of repeat customers fall within the 4–7 order range, suggesting significant opportunity to strengthen customer retention strategies and increase lifetime value.
+
+
+Month-over-month revenue growth analysis identified two product categories with exceptional expansion, showing more than 21x growth compared to the previous month. While this may indicate strong market momentum or successful promotional campaigns, further analysis is required to determine whether the growth is sustainable or driven by temporary spikes.
+
+
+
+Payment analysis shows a strong dependence on credit cards (74%), followed by boleto payments (19%), indicating diverse payment behavior among customers. However, minor inconsistencies were detected in payment type values (e.g., state codes appearing as payment methods), reinforcing the importance of robust data validation in production systems.
+
+
+
+Delivery performance analysis reveals substantial regional disparities, with northern states experiencing significantly longer delivery times compared to southeastern regions. São Paulo demonstrates the fastest average delivery time, reinforcing its role as the operational hub of the marketplace. These findings highlight logistics optimization opportunities in remote regions to improve customer experience and retention.
+
+
