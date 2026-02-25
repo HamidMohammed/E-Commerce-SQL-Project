@@ -110,7 +110,7 @@ Certain product categories experienced explosive month-over-month growth (>21x),
 ## 📘 Detailed Business Analysis
 
 See full analytical interpretation here:
-👉 [Business Analysis Summary](04_documentation/business_analysis_summary.md)
+👉 [Business Analysis Summary](/ecommerce-sql-data-engineering/04_documentation/business_analysis_summary.md)
 
 Advanced SQL concepts used:
 
