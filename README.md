@@ -1,81 +1,173 @@
 # 🛒 E-Commerce SQL Data Engineering Project
 
+![SQL Server](https://img.shields.io/badge/Database-SQL%20Server-blue)
+![Normalization](https://img.shields.io/badge/Normalization-3NF-success)
+![ETL](https://img.shields.io/badge/ETL-Production--Style-orange)
+![Analytics](https://img.shields.io/badge/Analytics-Window%20Functions-purple)
+
+---
+
 ## 📌 Project Overview
-This project demonstrates full database normalization (3NF), ETL processing, and analytical SQL queries using a denormalized e-commerce dataset.
 
-The project includes:
+This project demonstrates a complete end-to-end SQL data engineering workflow using a denormalized e-commerce dataset.
 
-- Data modeling & normalization
-- Data quality validation
-- ETL pipeline (raw → normalized schema)
-- Business analytics queries
-- Window functions for advanced analysis
+The work includes:
+
+- Full normalization to **Third Normal Form (3NF)**
+- Data quality validation and conflict detection
+- Production-style ETL pipeline
+- Primary and Foreign Key enforcement
+- Advanced analytical SQL queries
+- Window functions for time-series revenue growth analysis
+
+The goal of this project was not only to write SQL queries, but to design and implement a robust relational database system from a raw flat file.
 
 ---
 
 ## 🧱 Database Architecture
 
-### Raw Layer
-- `raw_table` (Flat CSV import)
+### 🔹 Raw Layer
+- `raw_table` — Flat CSV import containing 39 columns from multiple entities
 
-### Normalized Layer (3NF)
-- customer
-- seller
-- product
-- orders
-- shipping
-- order_item
-- payment
+### 🔹 Normalized 3NF Schema
+The dataset was decomposed into the following entities:
+
+- `customer`
+- `seller`
+- `product`
+- `orders`
+- `shipping`
+- `order_item`
+- `payment`
+
+All tables include:
+
+- Proper Primary Keys
+- Foreign Key constraints
+- Cascading rules where appropriate
+- Correct data types
 
 ---
 
 ## 🔄 ETL Strategy
 
-- Conflict detection using GROUP BY diagnostics
-- Controlled use of DISTINCT
-- Aggregation collapse for duplicated payment records
-- Primary and Foreign Key enforcement
+The ETL process includes:
+
+### ✅ Data Quality Diagnostics
+- Duplicate detection using `GROUP BY`
+- Conflict detection for composite keys
+- Validation of payment consistency
+- Handling denormalization artifacts
+
+### ✅ Conflict Resolution
+- `DISTINCT` used where safe
+- `GROUP BY` aggregation used where required (e.g., payment duplicates)
+- Deterministic rules using `MAX()` for collapsing duplicate rows
+
+### ✅ Referential Integrity
+- Enforced foreign keys
+- Controlled loading order to avoid FK violations
 
 ---
 
-## 📊 Analytical Queries Implemented
+## 📊 Business Analytical Queries Implemented
 
-- Top customers by spending
-- Revenue by state
-- Seller performance
-- Monthly revenue trends
-- Payment distribution
-- Delivery performance
-- Revenue growth (Window functions)
+The project answers the following business questions:
+
+1. Top 10 customers by total spending  
+2. Total revenue per seller state  
+3. Top 5 sellers by revenue  
+4. Monthly revenue trend  
+5. Top 5 product categories by number of orders  
+6. Customers with more than 3 orders  
+7. Orders with highest freight-to-product price ratio  
+8. Payment method distribution (percentage)  
+9. Average delivery time per state  
+10. Top 3 product categories by month-over-month revenue growth  
+
+Advanced SQL concepts used:
+
+- `COUNT(DISTINCT)`
+- `DATEFROMPARTS`
+- `LAG()` window function
+- `ROW_NUMBER()`
+- `SUM() OVER()`
+- Defensive aggregation logic
 
 ---
 
-## 🛠 Technologies Used
-- SQL Server
-- T-SQL
-- Window Functions (LAG, ROW_NUMBER)
-- GROUP BY Aggregations
-- Date handling (DATEFROMPARTS)
+## 🧠 Advanced Highlight: Revenue Growth Using Window Functions
+
+Month-over-month revenue growth per category was calculated using:
+
+- Monthly aggregation
+- `LAG()` for previous month comparison
+- Growth computation
+- Ranking logic
+
+This demonstrates analytical SQL capability beyond basic aggregation.
 
 ---
-ecommerce-sql-project/
+
+## 📂 Project Structure
+
+
+ecommerce-sql-data-engineering/
 │
 ├── README.md
 │
 ├── 01_schema/
-│   └── schema.sql
+│ └── schema.sql
 │
 ├── 02_etl/
-│   ├── raw_table.sql
-│   ├── load_data.sql
-│   └── data_quality_checks.sql
+│ ├── raw_table.sql
+│ ├── load_data.sql
+│ └── data_quality_checks.sql
 │
 ├── 03_analytics/
-│   └── queries.sql
+│ └── queries.sql
 │
 └── 04_documentation/
-    └── normalization_explanation.pdf
- ---
- 
+└── normalization_explanation.pdf
+
+
+---
+
+## 🛠 Technologies Used
+
+- SQL Server
+- T-SQL
+- Relational Modeling
+- Window Functions
+- Data Normalization (3NF)
+- ETL Pipeline Design
+- Data Quality Validation
+
+---
+
+## 🎯 Key Learning Outcomes
+
+- Translating a flat dataset into a structured relational schema
+- Identifying and resolving functional dependencies
+- Detecting partial and transitive dependencies
+- Designing composite primary keys
+- Avoiding revenue inflation due to improper joins
+- Building scalable analytical SQL logic
+- Writing production-style SQL scripts
+
+---
+
+## 🚀 Future Improvements
+
+- Index optimization strategy
+- Query performance benchmarking
+- Stored procedures for analytics
+- Dashboard integration (Power BI / Tableau)
+- Automation of ETL process
+
+---
+
 ## 👨‍💻 Author
-hamid mohamed
+
+Your Name  
+SQL | Data Engineering | Analytics
