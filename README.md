@@ -112,23 +112,21 @@ This demonstrates analytical SQL capability beyond basic aggregation.
 ## 📂 Project Structure
 
 
+## Project Structure
+
+```text
 ecommerce-sql-data-engineering/
-│
-├── README.md
-│
 ├── 01_schema/
-│ └── schema.sql
-│
+│   └── schema.sql                  # Database DDL (Tables, Keys)
 ├── 02_etl/
-│ ├── raw_table.sql
-│ ├── load_data.sql
-│ └── data_quality_checks.sql
-│
+│   ├── raw_table.sql               # Staging area for raw data
+│   ├── load_data.sql               # Transformation logic
+│   └── data_quality_checks.sql     # Validation scripts
 ├── 03_analytics/
-│ └── queries.sql
-│
-└── 04_documentation/
-└── normalization_explanation.pdf
+│   └── queries.sql                 # Business KPIs & Analytics
+├── 04_documentation/
+│   └── normalization_explanation.pdf # ERD and normalization logic
+└── README.md                       # Execution guide
 
 
 ---
