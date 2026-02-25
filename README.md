@@ -85,6 +85,33 @@ The project answers the following business questions:
 9. Average delivery time per state  
 10. Top 3 product categories by month-over-month revenue growth  
 
+---
+
+## 📈 Key Business Insights
+
+### 💰 Revenue Concentration
+Revenue is highly concentrated in São Paulo (SP), which dominates seller performance and benefits from the fastest delivery times. This indicates strong operational centralization.
+
+### 👥 Customer Retention Opportunity
+A small segment of repeat customers exists, with the most loyal customer placing 14 orders. However, repeat purchasing appears limited, suggesting strong potential for retention strategies and loyalty programs.
+
+### 🛒 Product Demand Patterns
+Household and personal care categories (e.g., cama_mesa_banho, beleza_saude) lead in order volume, indicating high-frequency consumer demand.
+
+### 💳 Payment Behavior
+Credit cards account for 74% of transactions, showing heavy reliance on card-based payments. Minor data inconsistencies were detected, emphasizing the importance of validation in production systems.
+
+### 🚚 Regional Delivery Disparity
+Delivery time varies significantly by state (8–29 days), revealing logistics inequality between developed and remote regions.
+
+### 📈 Revenue Growth Dynamics
+Certain product categories experienced explosive month-over-month growth (>21x), indicating emerging demand or campaign-driven spikes. Further stability analysis is recommended.
+
+## 📘 Detailed Business Analysis
+
+See full analytical interpretation here:
+👉 [Business Analysis Summary](04_documentation/business_analysis_summary.md)
+
 Advanced SQL concepts used:
 
 - `COUNT(DISTINCT)`
