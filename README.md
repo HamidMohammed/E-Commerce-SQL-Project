@@ -127,9 +127,8 @@ ecommerce-sql-data-engineering/
 ├── 04_documentation/
 │   └── normalization_explanation.pdf # ERD and normalization logic
 └── README.md                       # Execution guide
+```
 
-
----
 
 ## 🛠 Technologies Used
 
